@@ -1,0 +1,156 @@
+{
+    "Coffee": [
+        {
+            "name": "Americano",
+            "price": "€3.50"
+        },
+        {
+            "name": "Espresso",
+            "price": "€3.50"
+        },
+        {
+            "name": "Cappuccino",
+            "price": "€4.00"
+        },
+        {
+            "name": "Latte",
+            "price": "€4.00"
+        },
+        {
+            "name": "Hot Chocolate",
+            "price": "€4.00"
+        },
+        {
+            "name": "Mocca",
+            "price": "€4.00"
+        }
+    ],
+    "Drinks": [
+        {
+            "name": "Water (still/sparkling)",
+            "price": "€4.00"
+        },
+        {
+            "name": "Sprite",
+            "price": "€4.00"
+        },
+        {
+            "name": "Oasis",
+            "price": "€4.00"
+        },
+        {
+            "name": "Fanta",
+            "price": "€4.00"
+        },
+        {
+            "name": "Ice tea",
+            "price": "€4.00"
+        },
+        {
+            "name": "Cola",
+            "price": "€4.00"
+        },
+        {
+            "name": "Chocomel",
+            "price": "€4.00"
+        },
+        {
+            "name": "Energy Drink",
+            "price": "€3.00"
+        }
+    ],
+    "Juices": [
+        {
+            "name": "Apple",
+            "price": "€4.00"
+        },
+        {
+            "name": "Orange",
+            "price": "€4.00"
+        },
+        {
+            "name": "Pineapple",
+            "price": "€4.00"
+        },
+        {
+            "name": "Jatropha",
+            "price": "€0.50"
+        }
+    ],
+    "Tea": [
+        {
+            "name": "Tea",
+            "price": "€3.00"
+        }
+    ],
+    "Snacks": [
+        {
+            "name": "Candy bar",
+            "price": "€2.00"
+        },
+        {
+            "name": "Chips",
+            "price": "€3.00"
+        }
+    ],
+    "OtherProducts": [
+        {
+            "name": "Glass jars",
+            "price": "€1.50"
+        },
+        {
+            "name": "Rolling paper",
+            "price": "€1.00"
+        },
+        {
+            "name": "Grinder",
+            "price": "€4.00"
+        },
+        {
+            "name": "Wooden pipe",
+            "price": "€5.00"
+        },
+        {
+            "name": "Winter hat",
+            "price": "€16.00"
+        },
+        {
+            "name": "T-shirt",
+            "price": "€24.00"
+        },
+        {
+            "name": "Hoodie",
+            "price": "€34.00"
+        },
+        {
+            "name": "FabricLive 95: Mefjus",
+            "price": "€0.00"
+        }
+    ],
+    "SpecialMenu": [
+        {
+            "name": "Espresso",
+            "price": "€3.50"
+        },
+        {
+            "name": "Cappuccino",
+            "price": "€4.00"
+        },
+        {
+            "name": "Fanta",
+            "price": "€4.00"
+        },
+        {
+            "name": "Ice tea",
+            "price": "€4.00"
+        },
+        {
+            "name": "Chocomel",
+            "price": "€4.00"
+        },
+        {
+            "name": "Jatropha",
+            "price": "€0.50"
+        }
+    ]
+}

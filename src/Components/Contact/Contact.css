@@ -1,0 +1,88 @@
+.contact-page {
+    margin-top: 85px;
+    padding: 0;
+}
+
+.join-section {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    height: 100vh;
+}
+
+.contact-left,
+.contact-right {
+    width: 50%;
+}
+
+.contact-right img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-left {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2.contact-heading {
+    text-align: center;
+    line-height: normal;
+}
+
+h2.contact-heading {
+    color: #414b3a;
+    font-size: 30px;
+    line-height: 34px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    line-height: 45px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+section.join-page .container {
+    max-width: 100%;
+    padding: 0;
+    margin: auto;
+    margin-left: 0;
+}
+
+.contact-left.contactus-left ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97%;
+}
+
+.contact-left.contactus-left ul li {
+    display: block;
+    list-style: none;
+    text-align: center;
+    color: #222;
+    width: 33%;
+}
+
+.align-img {
+    margin-bottom: 35px;
+}
+
+section.menu-page,
+.rules-page {
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-left.contactus-left ul {
+        display: none;
+    }
+}

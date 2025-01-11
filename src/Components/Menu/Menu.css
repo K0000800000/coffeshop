@@ -1,0 +1,240 @@
+section.menu-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+h1.main-heading {
+    color: #414b3a;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.main-heading:last-child {
+    font-size: 40px;
+}
+
+.dishes-section.dishes-section1,
+.dishes-section6,
+.dishes-section7 {
+    height: auto;
+}
+
+.dishes-section,
+.rules-section {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    height: 100vh;
+}
+
+.cell.table_title span,
+.cell.table_title li,
+.price_table_inner ul li,
+.price_table_inner p,
+.rules-right p,
+.rules-right ul li {
+    font-family: 'Oswald';
+    font-weight: 300;
+    text-align: center;
+}
+
+.dishes-section.dishes-section-opp .menu-left {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.tea {
+    justify-content: center !important;
+}
+
+.dishes-section.dishes-section-opp.dishes-section2 .menu-left {
+    justify-content: space-between;
+}
+
+.dishes-section.dishes-section-opp .menu-right {
+    display: block;
+    padding: 0;
+}
+
+.menu-left,
+.menu-right,
+.rules-left,
+.rules-right {
+    width: 50%;
+}
+
+.menu-left img,
+.dishes-section.dishes-section-opp .menu-right img,
+.rules-left img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.menu-right,
+.menu-left {
+    background-color: #dfe8e5;
+}
+
+.menu-right {
+    background-color: #dfe8e5;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+h4.menu-heading,
+section.info-page h2.main-heading {
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 2rem auto;
+    letter-spacing: 0;
+    color: #414b3a;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    text-align: center;
+}
+
+.price_table_inner {
+    background-color: #f6f6f5;
+    width: 49%;
+    align-items: center;
+    margin: 2px 0;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-right.menu-space .menu-btn.btn,
+.menu-left.menu-space .menu-btn.btn {
+    text-align: center;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.price_table_inner ul,
+.rules-right ul {
+    margin: 0;
+    padding: 0;
+}
+
+.home-about-right .menu-btn a,
+.menu-right.menu-space .menu-btn.btn a,
+.menu-left.menu-space .menu-btn.btn a {
+    background: #fd8901;
+    color: #fff;
+    padding: 14px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-weight: 500;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.cell.table_title li,
+.price_table_inner ul li,
+.price_table_inner p,
+.rules-right p,
+.rules-right ul li,
+.price_in_table sub,
+.price {
+    font-family: 'Oswald';
+    font-weight: 300;
+    text-align: center;
+    color: #6c6965;
+    font-size: 18px;
+}
+
+.title_content {
+    font-size: 20px;
+    color: black;
+}
+
+section.menu-page .container,
+section.rules-page .container {
+    max-width: 100%;
+    width: unset;
+    padding: 0;
+}
+
+.menu_cont {
+    color: #6c6965;
+}
+
+.tea {
+    justify-content: center;
+}
+
+@media(max-width: 1200px) {
+    .price_table_inner {
+        min-height: 100px;
+    }
+}
+
+@media (max-width: 795px) {
+    .price_table_inner {
+        min-height: 120px;
+    }
+
+    .menu-left img,
+    .dishes-section.dishes-section-opp .menu-right img,
+    .rules-left img {
+        max-height: 430px;
+    }
+
+    .dishes-section .menu-left.menu-space,
+    .dishes-section .menu-right.menu-space {
+        padding: 20px;
+    }
+
+    .menu-content-section h2 {
+        font-size: 40px;
+    }
+
+    .menu-left,
+    .menu-right,
+    .rules-left,
+    .rules-right {
+        width: 90%;
+    }
+
+    .dishes-section,
+    .rules-section {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .dishes-section.dishes-section-opp .menu-left {
+        order: 2;
+    }
+
+    .dishes-section.dishes-section-opp .menu-right {
+        order: 1;
+    }
+}
+
+@media (max-width: 456px) {
+    .price_table_inner span {
+        font-size: 16px;
+    }
+}

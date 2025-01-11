@@ -1,0 +1,161 @@
+section.about-top {
+    padding: 7rem 0 4rem;
+}
+
+.about-content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.main-heading {
+    text-align: center;
+    color: #414b3a;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.info-page {
+    padding: 0;
+}
+
+.info-section {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    height: 100vh;
+}
+
+.info-right,
+.story-row-left {
+    background-color: #beffe9;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+.info-left,
+.info-right {
+    width: 50%;
+}
+
+.info-left img,
+.story-row-right img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: 65%;
+}
+
+.story-row-right {
+    padding: 0;
+}
+
+section.info-page .container {
+    max-width: 100%;
+    padding: 0;
+    width: unset;
+}
+
+.is2 {
+    height: auto;
+    min-height: 30vh;
+}
+
+.is2 img {
+    object-position: 0%;
+}
+
+.info-left.story-row-left {
+    padding: 20px;
+}
+
+.story-singular .story-question {
+    margin: 0;
+    padding: 0 0 15px 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.story-singular p {
+    padding-bottom: 20px;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+h4.menu-heading,
+section.info-page h2.main-heading {
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 2rem auto;
+    letter-spacing: 0;
+    color: #414b3a;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+}
+
+@media(max-width: 1201px) {
+    .is2 img {
+        object-position: 80%;
+    }
+}
+
+@media(max-width: 796px) {
+    .is2 img {
+        transform: scale(5);
+        object-position: 73%;
+        position: relative;
+        top: 1017px;
+    }
+
+    .story-row-right {
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 620px) {
+    .info-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info-left,
+    .story-row-right {
+        order: -1;
+    }
+
+    .is2 img {
+        width: 100%;
+        height: 200px;
+        object-position: unset;
+        top: 231px;
+        right: 500px;
+        object-fit: fill;
+
+    }
+
+    .info-right,
+    .info-left {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .info-right {
+        padding-bottom: 40px;
+
+    }
+}

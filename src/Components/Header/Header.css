@@ -1,0 +1,265 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 1010;
+    background: transparent;
+    top: 0;
+}
+
+.header a {
+    font-family: 'Oswald', sans-serif;
+}
+
+.active {
+    color: #dcbd34 !important;
+}
+
+.header-inner:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    height: 56px;
+    bottom: 0;
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.logo .logo-title {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 1px 7px #fff;
+    border-radius: 100px;
+    background: #fff;
+}
+
+.header-inner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    max-width: 740px;
+    padding: 0;
+    position: relative;
+    top: 10px;
+}
+
+.header-navi-wrapper {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    display: flex;
+}
+
+.menu>li>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #282828;
+    font-size: 15px;
+    position: relative;
+}
+
+.menu-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.menu a {
+    display: block;
+    line-height: 1.2;
+}
+
+.menu {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.0277em;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.menu li {
+    font-size: inherit;
+    line-height: 1.25;
+    position: relative;
+}
+
+.header-title-wrapper {
+    margin: 0 40px;
+    max-width: 50%;
+    padding: 0;
+    align-items: center;
+    display: flex;
+}
+
+.header-title {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: -1rem 0 0 -2.4rem;
+}
+
+.logo {
+    margin: 1rem 0 0 2.4rem;
+}
+
+.adjust {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-inner .toggle {
+    align-items: center;
+    display: flex;
+    overflow: visible;
+    padding: 0 2rem;
+}
+
+button.toggle {
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: inherit;
+    font-weight: 400;
+    letter-spacing: inherit;
+    padding: 0;
+    text-transform: none;
+}
+
+.toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 6.6rem;
+}
+
+.toggle .toggle-inner {
+    padding-top: 0.8rem;
+}
+
+.toggle-inner {
+    display: flex;
+    justify-content: center;
+    height: 2.3rem;
+    position: relative;
+}
+
+.toggle .toggle-icon,
+.toggle svg {
+    height: 0.8rem;
+    width: 2.6rem;
+}
+
+.toggle-icon {
+    display: block;
+    overflow: hidden;
+}
+
+.toggle svg {
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+.header-inner .toggle path {
+    fill: currentColor;
+}
+
+.mobile-title {
+    display: none;
+    z-index: 1;
+}
+
+.mobile-title span {
+    font-family: "Playwrite AU SA", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    color: #3A7F4E;
+}
+
+@media (max-width: 796px) {
+
+    .mobile-menu,
+    .header {
+        position: fixed;
+    }
+
+    .header-inner {
+        justify-content: flex-start;
+    }
+
+    .header-navi-wrapper {
+        display: none;
+    }
+
+    .mobile-title {
+        display: block;
+    }
+
+    .toggle svg {
+        display: block;
+    }
+
+    .mobile-menu {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .mobile-menu-item {
+        margin-bottom: 20px;
+    }
+
+    .mobile-menu-item a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #282828;
+        font-size: 22px;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+@media(max-width: 576px) {
+    .header-inner {
+        max-width: 480px;
+    }
+
+    .main-title {
+        font-size: 65px !important;
+    }
+}
+
+@media(max-width: 400px) {
+    .mobile-title span {
+        font-size: 18px;
+    }
+
+    .header-title-wrapper {
+        margin: 0 20px;
+    }
+}
