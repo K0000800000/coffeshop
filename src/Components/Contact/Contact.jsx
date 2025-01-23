@@ -36,6 +36,14 @@ export const Contact = () => {
                                 </div>
                             </li>
                         </ul>
+                        <div className='feedback'>
+                            <h2 className="contact-heading">Leave us a feedback!</h2>
+                            <form className="feedback-form">
+                                <input type="text" name="name" placeholder="Your Name" maxLength="50" required />
+                                <textarea name="message" placeholder="Your Message" maxLength="300" required></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

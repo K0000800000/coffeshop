@@ -72,6 +72,10 @@ section.join-page .container {
     width: 33%;
 }
 
+.contactus-left {
+    justify-content: space-between !important;
+}
+
 .align-img {
     margin-bottom: 35px;
 }
@@ -79,6 +83,52 @@ section.join-page .container {
 section.menu-page,
 .rules-page {
     padding: 0;
+}
+
+
+.contact-left.contactus-left {
+    padding: 20px;
+}
+
+.feedback {
+    width: 100%;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea {
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    font-size: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feedback-form textarea {
+    height: 80px;
+    resize: none;
+    overflow-y: auto;
+}
+
+.feedback-form button {
+    padding: 10px;
+    font-size: inherit;
+    background-color: #414b3a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #333;
 }
 
 @media (max-width: 768px) {
