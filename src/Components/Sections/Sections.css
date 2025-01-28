@@ -85,10 +85,17 @@ section.about-sec-home {
 .menu-btn {
     text-align: center;
     margin: 40px 0 0;
+    max-width: 150px;
+    align-self: center;
 }
 
 .menu-sec {
     padding: 70px 0;
+}
+
+.menu-sec .container {
+    display: flex;
+    flex-direction: column;
 }
 
 section.menu-sec,

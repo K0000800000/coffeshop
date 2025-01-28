@@ -132,6 +132,10 @@ section.menu-page,
 }
 
 @media (max-width: 768px) {
+    iframe {
+        min-height: 300px;
+    }
+
     .contact-left.contactus-left ul {
         display: none;
     }
