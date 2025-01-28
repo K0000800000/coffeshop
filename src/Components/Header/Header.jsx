@@ -48,7 +48,7 @@ export const Header = () => {
                     </div>
                 </div>
                 <div className='mobile-title'>
-                    <span>Hreengouse</span>
+                    <span>Coffeshop</span>
                 </div>
                 <button className="toggle" onClick={toggleMobileMenu}>
                     <span className="toggle-inner">

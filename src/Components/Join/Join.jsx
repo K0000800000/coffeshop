@@ -36,8 +36,8 @@ export const Join = () => {
                         <img src={inside} alt="inside" className="img" />
                     </div>
                     <div className="contact-left">
-                        <h2 className="contact-heading">Join Hreengouse</h2>
-                        <p className="contact-desc">If you want to join Hreengouse family, don’t hesitate to fill out the form with your personal details and experience!
+                        <h2 className="contact-heading">Join Coffeshop</h2>
+                        <p className="contact-desc">If you want to join Coffeshop family, don’t hesitate to fill out the form with your personal details and experience!
                             We will contact you for further information when we are hiring.
                         </p>
                         <form className="join-form">

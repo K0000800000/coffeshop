@@ -13,9 +13,9 @@ export const Menu = ({ feedbacks, specialItems, coffeeItems, drinksItems, juices
             <section className="menu-top">
                 <div className="container">
                     <div className="menu-content-section">
-                        <h1 className="main-heading">Hreengouse Effect Coffee Shop Menu</h1>
+                        <h1 className="main-heading">Coffeshop Menu</h1>
                         <h2>Be Our Guest Experience the Best Coffeeshop Menu</h2>
-                        <p>Step into Hreengouse, where comfort meets flavor. We’re all about delivering the best in coffee and treats, crafted to satisfy your cravings and brighten your day. Whether you're here to unwind, catch up with friends, or fuel your day, our cozy spot welcomes you. With a wide selection of premium products, you’ll always find something to love. Come by and enjoy the vibe, the coffee, and the company!</p>
+                        <p>Step into Coffeshop, where comfort meets flavor. We’re all about delivering the best in coffee and treats, crafted to satisfy your cravings and brighten your day. Whether you're here to unwind, catch up with friends, or fuel your day, our cozy spot welcomes you. With a wide selection of premium products, you’ll always find something to love. Come by and enjoy the vibe, the coffee, and the company!</p>
                     </div>
                 </div>
             </section>
@@ -161,10 +161,10 @@ export const Menu = ({ feedbacks, specialItems, coffeeItems, drinksItems, juices
                             <img src={bg} className='menuimg' alt="bg" />
                         </div>
                         <div className='menu-right menu-space'>
-                            <h4 className='menu-heading'>Why Hreengouse Coffeeshop</h4>
+                            <h4 className='menu-heading'>Why Coffeeshop</h4>
                             <p className="menu_cont">Let’s dive into our coffee selection, crafted with the finest beans sourced from around the world. Our espresso boasts a rich, full-bodied blend, making it the ideal way to kickstart your morning. If you’re after something smoother, our mocha with whipped cream offers a mellow, velvety flavor. For those craving a little indulgence, our lattes and cappuccinos, made with creamy steamed milk and espresso, hit the spot every time.</p>
                             <p className="menu_cont">If you’re in the mood for sweetness, our mocha combines chocolate and espresso into a decadent treat. On those hot summer days, our iced beverages provide the perfect mix of refreshment and energy. For a more herbal twist, our fresh mint options are sure to complement any mood. And if you’re feeling peckish, our baked goods—prepared fresh daily—are the perfect pairing with your drink of choice.</p>
-                            <p className="menu_cont">Of course, our menu also includes a unique selection of offerings to elevate your experience. Our Hreengouse is fully licensed and features a variety of strains to suit your preferences. Whether you're new to the scene or a seasoned explorer, our knowledgeable team is here to guide you in finding the perfect option for your needs.</p>
+                            <p className="menu_cont">Of course, our menu also includes a unique selection of offerings to elevate your experience. Our Coffeshop is fully licensed and features a variety of strains to suit your preferences. Whether you're new to the scene or a seasoned explorer, our knowledgeable team is here to guide you in finding the perfect option for your needs.</p>
                         </div>
                     </div>
                 </div>

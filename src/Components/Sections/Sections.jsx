@@ -16,20 +16,20 @@ export const Sections = ({ specialItems, feedbacks }) => {
                     </div>
                     <div className="custom-sec">
                         <div className="about-left">
-                            <p>The Hreengouse has the perfect vibe to enjoy your favorite beverage, crafted just the way you like it, whether you're relaxing in a cozy interior or lounging on the terrace with a scenic view.
+                            <p>The Coffeshop has the perfect vibe to enjoy your favorite beverage, crafted just the way you like it, whether you're relaxing in a cozy interior or lounging on the terrace with a scenic view.
 
-                                With its inviting atmosphere and unique charm, the Hreengouse offers an unforgettable experience. Its warm ambiance, combined with expertly prepared drinks, makes it a haven for those seeking a moment of relaxation or connection.
+                                With its inviting atmosphere and unique charm, the Coffeshop offers an unforgettable experience. Its warm ambiance, combined with expertly prepared drinks, makes it a haven for those seeking a moment of relaxation or connection.
 
-                                Coffee shops like Hreengouse are destinations where memories are made, offering more than just coffee—they provide moments to cherish forever.</p>
+                                Coffee shops like Coffeshop are destinations where memories are made, offering more than just coffee—they provide moments to cherish forever.</p>
                         </div>
                         <div className="about-right">
                             <img src={people} alt="people" />
                         </div>
                     </div>
                     <div className="custom-bot-sec">
-                        <p>If you're exploring this vibrant city and searching for the perfect spot to relax and vibe with friends, Hreengouse is your go-to destination. We’re more than just a coffee shop—we’re a fusion of café culture, lifestyle, and a place to unwind.
-                            Hreengouse is where quality time meets exceptional experiences. From our flavorful beverages to the inviting ambiance, every visit is designed to create unforgettable moments. Whether you’re savoring a coffee escape or simply soaking in the atmosphere, Hreengouse is the ultimate spot to make your time truly special.</p>
-                        <p>Beyond our delicious treats, exceptional coffee, and trendy fashion, there’s even more to discover at Hreengouse. Looking for a unique keepsake to remember your visit? Our merchandise offers plenty of options to choose from.
+                        <p>If you're exploring this vibrant city and searching for the perfect spot to relax and vibe with friends, Coffeshop is your go-to destination. We’re more than just a coffee shop—we’re a fusion of café culture, lifestyle, and a place to unwind.
+                            Coffeshop is where quality time meets exceptional experiences. From our flavorful beverages to the inviting ambiance, every visit is designed to create unforgettable moments. Whether you’re savoring a coffee escape or simply soaking in the atmosphere, Coffeshop is the ultimate spot to make your time truly special.</p>
+                        <p>Beyond our delicious treats, exceptional coffee, and trendy fashion, there’s even more to discover at Coffeshop. Looking for a unique keepsake to remember your visit? Our merchandise offers plenty of options to choose from.
                             Why not pick up something special, like a vintage wooden pipe, as a timeless memento of your time here? Take home authentic, handcrafted items that carry the essence of your experience and keep those cherished memories alive.</p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export const Sections = ({ specialItems, feedbacks }) => {
                         <div className="home-about-right">
                             <h3>ABOUT US</h3>
                             <p>Located in the centre of city as a <Link to="/about">Local Coffeeshop</Link> we have so much to offer to our customers. While you enjoy your time and share the right vibe with your friends you can capture the vivid view of the city from our place.</p>
-                            <p>We believe a perfect coffee shop experience is about more than just great coffee—it’s about feeling truly welcome. That’s why at Hreengouse, we focus on creating a warm and inviting atmosphere. We’re here to make every visit special, offering some of the finest beverages and unforgettable moments. So, why not share your evening with us and make it a time to remember?</p>
+                            <p>We believe a perfect coffee shop experience is about more than just great coffee—it’s about feeling truly welcome. That’s why at Coffeshop, we focus on creating a warm and inviting atmosphere. We’re here to make every visit special, offering some of the finest beverages and unforgettable moments. So, why not share your evening with us and make it a time to remember?</p>
                             <p>Our cozy and welcoming corner is the perfect spot for those seeking a moment of tranquility. Without breaking any boundaries, we offer a serene space where you can quiet the chaos of the mind, embrace calmness, and step into a world of peace.Our cozy and welcoming corner is the perfect spot for those seeking a moment of tranquility. Without breaking any boundaries, we offer a serene space where you can quiet the chaos of the mind, embrace calmness, and step into a world of peace.</p>
                             <div className="menu-btn">
                                 <Link to="/about">Know More</Link>
@@ -80,7 +80,7 @@ export const Sections = ({ specialItems, feedbacks }) => {
                         <h3>OUR RULES</h3>
                         <div className="desc style1">
                             <p>
-                                At Hreengouse, we’re dedicated to providing an exceptional experience for every customer who walks through our doors. While we offer so much for you to enjoy, we also have a set of rules that we kindly ask everyone, including our team and visitors, to respect and follow. This ensures a safe and enjoyable environment for all.. <br /> If not followed by anyone inside the house we have the authority to take strict actions for the same. <br />The rules that need to be followed are listed as follows:
+                                At Coffeshop, we’re dedicated to providing an exceptional experience for every customer who walks through our doors. While we offer so much for you to enjoy, we also have a set of rules that we kindly ask everyone, including our team and visitors, to respect and follow. This ensures a safe and enjoyable environment for all.. <br /> If not followed by anyone inside the house we have the authority to take strict actions for the same. <br />The rules that need to be followed are listed as follows:
                             </p>
                         </div>
                     </div>

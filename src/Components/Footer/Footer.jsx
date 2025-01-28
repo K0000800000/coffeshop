@@ -81,7 +81,7 @@ export const Footer = () => {
                 </div>
             </div>
             <div className="copyright-section">
-                <p> © 2025 Hreengouse. NOT FOR COMMERCIAL PURPOSES by K067</p>
+                <p> © 2025 Coffeshop. NOT FOR COMMERCIAL PURPOSES by K067</p>
             </div>
         </footer>
     )
