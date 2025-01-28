@@ -10,7 +10,13 @@ export const Contact = () => {
             <div className="container">
                 <div className="join-section">
                     <div className="contact-right">
-                        <img src={map} alt="inside" className="img" draggable="false" />
+                        <iframe
+                            title="Location Map"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-74.25909%2C40.477399%2C-73.700272%2C40.917577&layer=mapnik"
+                            style={{ border: 0, width: '100%', height: '100%' }}
+                            allowFullScreen=""
+                            loading="lazy"
+                        ></iframe>
                     </div>
                     <div className="contact-left contactus-left">
                         <h2 className="contact-heading">If you want to Contact, don’t hesitate!</h2>

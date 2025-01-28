@@ -15,7 +15,7 @@
     width: 50%;
 }
 
-.contact-right img {
+.contact-right iframe {
     object-fit: cover;
     height: 100%;
     width: 100%;
