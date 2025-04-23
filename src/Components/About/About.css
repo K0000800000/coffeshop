@@ -12,7 +12,7 @@ h1.main-heading {
     text-align: center;
     color: #414b3a;
     font-size: 30px;
-    line-height: 36px;
+    line-height: 46px;
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -127,7 +127,7 @@ section.info-page h2.main-heading {
     }
 }
 
-@media(max-width: 620px) {
+@media(max-width: 650px) {
     .info-section {
         flex-direction: column;
         height: auto;
@@ -143,7 +143,7 @@ section.info-page h2.main-heading {
         height: 200px;
         object-position: unset;
         top: 231px;
-        right: 500px;
+        right: 390px;
         object-fit: fill;
 
     }
