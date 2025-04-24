@@ -16,6 +16,9 @@
 }
 
 .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-width: 100%;
     text-align: center;
     font-size: 14px;

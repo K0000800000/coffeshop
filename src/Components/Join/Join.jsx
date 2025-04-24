@@ -6,6 +6,9 @@ export const Join = () => {
     const [phone, setPhone] = useState('+');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [errors, setErrors] = useState({});
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handlePhoneChange = (e) => {
         let value = e.target.value;
@@ -13,19 +16,73 @@ export const Join = () => {
         if (value[0] !== '+') {
             value = '+' + value.replace(/\+/g, '');
         }
-        if (value.length > 16) {
-            value = value.slice(0, 16);
+        if (value.length > 13) {
+            value = value.slice(0, 13);
         }
         setPhone(value);
+        setErrors((prev) => ({ ...prev, phone: value.length < 11 }));
     };
 
-    const handleNameChange = (setter) => (e) => {
+    const handleNameChange = (setter, field) => (e) => {
         let value = e.target.value;
         value = value.replace(/[^a-zA-Z]/g, '');
-        if (value.length > 12) {
-            value = value.slice(0, 12);
+        if (value.length > 32) {
+            value = value.slice(0, 32);
         }
         setter(value);
+        setErrors((prev) => ({ ...prev, [field]: value.length < 2 }));
+    };
+
+    const handleEmailChange = (e) => {
+        const value = e.target.value;
+        setEmail(value);
+        setErrors((prev) => ({
+            ...prev,
+            email: !value.includes('.') || !value.includes('@'),
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const fileInput = document.getElementById('cv');
+        const file = fileInput.files[0];
+        const allowedExtensions = ['pdf', 'docx'];
+
+        const newErrors = {
+            firstName: firstName.length < 2,
+            lastName: lastName.length < 2,
+            email: !email.includes('.') || !email.includes('@'),
+            phone: phone.length < 11,
+            cv: !file || !allowedExtensions.includes(file.name.split('.').pop().toLowerCase()),
+        };
+        setErrors(newErrors);
+
+        if (Object.values(newErrors).some((error) => error)) {
+            return;
+        }
+
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('+');
+        fileInput.value = '';
+        setSuccessMessage('Submitted!');
+
+        setTimeout(() => {
+            setSuccessMessage('');
+        }, 7000);
+    };
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        const allowedExtensions = ['pdf', 'docx'];
+
+        if (!file || !allowedExtensions.includes(file.name.split('.').pop().toLowerCase())) {
+            setErrors((prev) => ({ ...prev, cv: true }));
+        } else {
+            setErrors((prev) => ({ ...prev, cv: false }));
+        }
     };
 
     return (
@@ -37,10 +94,11 @@ export const Join = () => {
                     </div>
                     <div className="contact-left">
                         <h2 className="contact-heading">Join Coffeshop</h2>
-                        <p className="contact-desc">If you want to join Coffeshop family, don’t hesitate to fill out the form with your personal details and experience!
+                        <p className="contact-desc">
+                            If you want to join Coffeshop family, don’t hesitate to fill out the form with your personal details and experience!
                             We will contact you for further information when we are hiring.
                         </p>
-                        <form className="join-form">
+                        <form className="join-form" onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="firstName">First Name</label>
                                 <input
@@ -48,9 +106,11 @@ export const Join = () => {
                                     id="firstName"
                                     name="firstName"
                                     value={firstName}
-                                    onChange={handleNameChange(setFirstName)}
-                                    required
+                                    onChange={handleNameChange(setFirstName, 'firstName')}
                                     minLength={2}
+                                    style={{
+                                        borderColor: errors.firstName ? 'red' : '',
+                                    }}
                                 />
                             </div>
                             <div className="form-group">
@@ -60,14 +120,25 @@ export const Join = () => {
                                     id="lastName"
                                     name="lastName"
                                     value={lastName}
-                                    onChange={handleNameChange(setLastName)}
-                                    required
+                                    onChange={handleNameChange(setLastName, 'lastName')}
                                     minLength={2}
+                                    style={{
+                                        borderColor: errors.lastName ? 'red' : '',
+                                    }}
                                 />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" id="email" name="email" required />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={email}
+                                    onChange={handleEmailChange}
+                                    style={{
+                                        borderColor: errors.email ? 'red' : '',
+                                    }}
+                                />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="phone">Phone Number</label>
@@ -77,18 +148,45 @@ export const Join = () => {
                                     name="phone"
                                     value={phone}
                                     onChange={handlePhoneChange}
-                                    required
+                                    minLength={11}
+                                    style={{
+                                        borderColor: errors.phone ? 'red' : '',
+                                    }}
                                 />
                             </div>
                             <div className="form-group">
                                 <label>CV</label>
-                                <input type="file" id='cv' name="cv" required accept=".pdf,.docx" />
+                                <div className='file-group'>
+                                    <input
+                                        type="file"
+                                        id="cv"
+                                        name="cv"
+                                        accept=".pdf,.docx"
+                                        required
+                                        onChange={handleFileChange}
+                                        style={{
+                                            borderColor: errors.cv ? 'red' : '',
+                                        }}
+                                    />
+                                    {errors.cv && (
+                                        <p className="error-message" style={{ color: 'red', margin: '0' }}>
+                                            Only PDF or DOCX.
+                                        </p>
+                                    )}
+                                </div>
                             </div>
-                            <button type="submit" className="submit-button">Submit</button>
+                            <div className='submit-group'>
+                                <button type="submit" className="submit-button">Submit</button>
+                                {successMessage && (
+                                    <p className="success-message" style={{ color: 'green', marginTop: '10px' }}>
+                                        {successMessage}
+                                    </p>
+                                )}
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};

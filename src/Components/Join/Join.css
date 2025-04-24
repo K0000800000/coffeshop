@@ -15,6 +15,18 @@
     width: 50%;
 }
 
+.file-group {
+    display: flex;
+    align-items: center;
+}
+
+.submit-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .contact-right img {
     object-fit: cover;
     height: 100%;

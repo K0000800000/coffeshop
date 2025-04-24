@@ -112,7 +112,7 @@ section.menu-page,
 }
 
 .feedback-form textarea {
-    height: 80px;
+    height: 120px;
     resize: none;
     overflow-y: auto;
 }

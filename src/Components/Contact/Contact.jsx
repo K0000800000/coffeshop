@@ -1,10 +1,22 @@
+import React, { useState } from 'react';
+
 import './Contact.css';
 import location from '../../img/icon/location-icon.png';
 import phone from '../../img/icon/phone.png';
 import timing from '../../img/icon/timing.png';
-import map from '../../img/pg/map.png';
 
 export const Contact = () => {
+    const [userName, setUserName] = useState('');
+
+    const handleNameChange = (setter) => (e) => {
+        let value = e.target.value;
+        value = value.replace(/[^a-zA-Z]/g, '');
+        if (value.length > 12) {
+            value = value.slice(0, 12);
+        }
+        setter(value);
+    };
+
     return (
         <section className="join-page contact-page">
             <div className="container">
@@ -45,7 +57,15 @@ export const Contact = () => {
                         <div className='feedback'>
                             <h2 className="contact-heading">Leave us a feedback!</h2>
                             <form className="feedback-form">
-                                <input type="text" name="name" placeholder="Your Name" maxLength="50" required />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    value={userName}
+                                    onChange={handleNameChange(setUserName)}
+                                    required
+                                    minLength={2}
+                                />
                                 <textarea name="message" placeholder="Your Message" maxLength="300" required></textarea>
                                 <button type="submit">Submit</button>
                             </form>

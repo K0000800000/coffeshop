@@ -128,9 +128,9 @@ sup {
 .alignleft,
 .alignright,
 .alignwide {
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-right: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   margin-left: auto;
 }
 
