@@ -7,7 +7,7 @@ import snacks from '../../img/pg/snacks.png';
 import bg from '../../img/pg/bg.png';
 import bottle from '../../img/pg/bottle.png';
 
-export const Menu = ({ feedbacks, specialItems, coffeeItems, drinksItems, juicesItems, teaItems, snacksItems, otherProductsItems }) => {
+export const Menu = ({ coffeeItems, drinksItems, juicesItems, teaItems, snacksItems, otherProductsItems }) => {
     return (
         <>
             <section className="menu-top">

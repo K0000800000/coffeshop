@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import {
+    validateEmail,
+    validatePhone,
+    validateFileExtension,
+} from '../utils/validUtils';
 import './Join.css';
 import inside from '../../img/pg/inside.png';
 
@@ -20,7 +25,7 @@ export const Join = () => {
             value = value.slice(0, 13);
         }
         setPhone(value);
-        setErrors((prev) => ({ ...prev, phone: value.length < 11 }));
+        setErrors((prev) => ({ ...prev, phone: !validatePhone(value) }));
     };
 
     const handleNameChange = (setter, field) => (e) => {
@@ -36,10 +41,7 @@ export const Join = () => {
     const handleEmailChange = (e) => {
         const value = e.target.value;
         setEmail(value);
-        setErrors((prev) => ({
-            ...prev,
-            email: !value.includes('.') || !value.includes('@'),
-        }));
+        setErrors((prev) => ({ ...prev, email: !validateEmail(value) }));
     };
 
     const handleSubmit = (e) => {
@@ -52,9 +54,9 @@ export const Join = () => {
         const newErrors = {
             firstName: firstName.length < 2,
             lastName: lastName.length < 2,
-            email: !email.includes('.') || !email.includes('@'),
-            phone: phone.length < 11,
-            cv: !file || !allowedExtensions.includes(file.name.split('.').pop().toLowerCase()),
+            email: !validateEmail(email),
+            phone: !validatePhone(phone),
+            cv: !validateFileExtension(file, allowedExtensions),
         };
         setErrors(newErrors);
 
@@ -78,11 +80,10 @@ export const Join = () => {
         const file = e.target.files[0];
         const allowedExtensions = ['pdf', 'docx'];
 
-        if (!file || !allowedExtensions.includes(file.name.split('.').pop().toLowerCase())) {
-            setErrors((prev) => ({ ...prev, cv: true }));
-        } else {
-            setErrors((prev) => ({ ...prev, cv: false }));
-        }
+        setErrors((prev) => ({
+            ...prev,
+            cv: !validateFileExtension(file, allowedExtensions),
+        }));
     };
 
     return (
