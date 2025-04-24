@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hreengouse-host/static/css/main.684b8461.css",
-    "main.js": "/hreengouse-host/static/js/main.8329b0cb.js",
+    "main.css": "/hreengouse-host/static/css/main.a9e3aef1.css",
+    "main.js": "/hreengouse-host/static/js/main.ce4744dd.js",
     "static/media/banner.png": "/hreengouse-host/static/media/banner.67375261771cd9f94c1d.png",
     "static/media/tea.png": "/hreengouse-host/static/media/tea.99912353e5c985493a1c.png",
     "static/media/snacks.png": "/hreengouse-host/static/media/snacks.bd5bdfa88b4167ad424a.png",
@@ -20,11 +20,11 @@
     "static/media/whatsapp.svg": "/hreengouse-host/static/media/whatsapp.4d2e4020f8bc6f13c4bea00845309514.svg",
     "index.html": "/hreengouse-host/index.html",
     "static/media/telegram.svg": "/hreengouse-host/static/media/telegram.f7fb061b445594991c9499eb83154f1b.svg",
-    "main.684b8461.css.map": "/hreengouse-host/static/css/main.684b8461.css.map",
-    "main.8329b0cb.js.map": "/hreengouse-host/static/js/main.8329b0cb.js.map"
+    "main.a9e3aef1.css.map": "/hreengouse-host/static/css/main.a9e3aef1.css.map",
+    "main.ce4744dd.js.map": "/hreengouse-host/static/js/main.ce4744dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.684b8461.css",
-    "static/js/main.8329b0cb.js"
+    "static/css/main.a9e3aef1.css",
+    "static/js/main.ce4744dd.js"
   ]
 }
