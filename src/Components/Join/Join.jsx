@@ -10,6 +10,7 @@ import {
 import './Join.css';
 import inside from '../../img/pg/inside.png';
 import { dataPost } from '../Functions/utils/dataPost';
+import { useMessageHandler } from '../Functions/Hooks/useMessageHandler';
 
 export const Join = () => {
     const [phone, setPhone] = useState('+');
@@ -17,7 +18,7 @@ export const Join = () => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [errors, setErrors] = useState({});
-    const [successMessage, setSuccessMessage] = useState('');
+    const { successMessage, errorMessage, setSuccess, setError } = useMessageHandler();
 
     const handlePhoneChange = (e) => {
         const value = sanitizePhone(sanitizeInput(e.target.value));
@@ -68,19 +69,17 @@ export const Join = () => {
         const result = await dataPost('https://jsonplaceholder.typicode.com/posts', formData);
 
         if (result.success) {
+            console.log(formData);
+
             setFirstName('');
             setLastName('');
             setEmail('');
             setPhone('+');
             fileInput.value = '';
-            setSuccessMessage('Submitted!');
+            setSuccess('Submitted!');
         } else {
-            setSuccessMessage('Error occurred, try later.');
+            setError('Error occurred, try later.');
         }
-
-        setTimeout(() => {
-            setSuccessMessage('');
-        }, 7000);
     };
 
     const handleFileChange = (e) => {
@@ -188,6 +187,11 @@ export const Join = () => {
                                 {successMessage && (
                                     <p className="success-message" style={{ color: 'green', marginTop: '10px' }}>
                                         {successMessage}
+                                    </p>
+                                )}
+                                {errorMessage && (
+                                    <p className="error-message" style={{ color: 'red', marginTop: '10px' }}>
+                                        {errorMessage}
                                     </p>
                                 )}
                             </div>

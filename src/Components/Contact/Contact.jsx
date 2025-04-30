@@ -6,12 +6,13 @@ import phone from '../../img/icon/phone.png';
 import timing from '../../img/icon/timing.png';
 import { sanitizeInput } from '../Functions/utils/validUtils';
 import { dataPost } from '../Functions/utils/dataPost';
+import { useMessageHandler } from '../Functions/Hooks/useMessageHandler';
+
 
 export const Contact = () => {
     const [userName, setUserName] = useState('');
     const [message, setMessage] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    const { successMessage, errorMessage, setSuccess, setError } = useMessageHandler();
 
     const handleNameChange = (setter) => (e) => {
         let value = e.target.value;
@@ -35,29 +36,15 @@ export const Contact = () => {
             message: sanitizedMessage,
         };
 
-        try {
-            const result = await dataPost('https://jsonplaceholder.typicode.com/posts', formData);
+        const result = await dataPost('https://jsonplaceholder.typicode.com/posts', formData);
 
-            if (result.success) {
-                setUserName('');
-                setMessage('');
-                setSuccessMessage('Submitted!');
-                setErrorMessage('');
-            } else {
-                setErrorMessage('Error occurred, try later.');
-                setSuccessMessage('');
-            }
-        } catch (error) {
-            setErrorMessage('Error occurred, try later.');
-            setSuccessMessage('');
+        if (result.success) {
+            setUserName('');
+            setMessage('');
+            setSuccess('Submitted!');
+        } else {
+            setError('Error occurred, try later.');
         }
-
-        setTimeout(() => {
-            setSuccessMessage('');
-            setErrorMessage('');
-        }, 7000);
-
-        console.log('Sanitized Message:', sanitizedMessage);
     };
 
     return (
