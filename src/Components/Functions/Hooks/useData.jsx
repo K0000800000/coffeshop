@@ -10,9 +10,10 @@ export const useData = () => {
     const [otherProductsItems, setOtherProductsItems] = useState([]);
     const [specialItems, setSpecialItems] = useState([]);
     const [photos, setPhotos] = useState([]);
+    const [photosLoading, setPhotosLoading] = useState(true); // Add loading state
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/user.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/user.json")
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -24,60 +25,66 @@ export const useData = () => {
     }, [setFeedbacks]);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/product.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setSpecialItems(data.SpecialMenu))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/product.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setCoffeeItems(data.Coffee))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/product.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setDrinksItems(data.Drinks))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/product.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setJuicesItems(data.Juices))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/product.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setTeaItems(data.Tea))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/product.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setSnacksItems(data.Snacks))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/product.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setOtherProductsItems(data.OtherProducts))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/gallery.json`)
+        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/gallery.json")
             .then(response => response.json())
-            .then(data => setPhotos(data))
-            .catch(error => console.error('Error fetching gallery data:', error));
+            .then(data => {
+                setPhotos(data);
+                setPhotosLoading(false); // Set loading to false after data is fetched
+            })
+            .catch(error => {
+                console.error('Error fetching gallery data:', error);
+                setPhotosLoading(false); // Set loading to false even if there's an error
+            });
     }, [setPhotos]);
 
-    return { feedbacks, specialItems, coffeeItems, drinksItems, juicesItems, teaItems, snacksItems, otherProductsItems, photos };
-}
+    return { feedbacks, specialItems, coffeeItems, drinksItems, juicesItems, teaItems, snacksItems, otherProductsItems, photos, photosLoading };
+};

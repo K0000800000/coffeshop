@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/menu" element={<Menu {...data} />} />
-        <Route path="/gallery" element={<Gallery photos={data.photos} />} />
+        <Route path="/gallery" element={<Gallery photos={data.photos} photosLoading={data.photosLoading} />} />
         <Route path="/about" element={<About />} />
         <Route path="/join" element={<Join />} />
         <Route path="/contact" element={<Contact />} />
