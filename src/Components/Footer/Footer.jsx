@@ -27,11 +27,11 @@ export const Footer = () => {
                                 <p><b>Contact</b><br />
                                     <a href="tel:00000000000">+00000000000</a></p>
                                 <div className='sm-link'>
-                                    <a href='#'>
+                                    <a href="https://wa.me/00000000000" target="_blank" rel="noopener noreferrer">
                                         <img src={wa} width={62} height={56} alt="wa" />
                                     </a>
-                                    <a href='#'>
-                                        <img src={tg} width={62} height={56} alt="wa" />
+                                    <a href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+                                        <img src={tg} width={62} height={56} alt="tg" />
                                     </a>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@ export const Footer = () => {
                 </div>
             </div>
             <div className="copyright-section">
-                <p> © 2025 Coffeshop. NOT FOR COMMERCIAL PURPOSES by K067</p>
+                <p> © 2025 Coffeshop. by K067</p>
             </div>
         </footer>
     )
