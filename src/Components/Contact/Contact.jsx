@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { sanitizeInput } from '../utils/validUtils';
 
 import './Contact.css';
 import location from '../../img/icon/location-icon.png';
 import phone from '../../img/icon/phone.png';
 import timing from '../../img/icon/timing.png';
+import { sanitizeInput } from '../Functions/utils/validUtils';
+import { dataPost } from '../Functions/utils/dataPost';
 
 export const Contact = () => {
     const [userName, setUserName] = useState('');
     const [message, setMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
-
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleNameChange = (setter) => (e) => {
         let value = e.target.value;
@@ -25,16 +26,35 @@ export const Contact = () => {
         setMessage(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const sanitizedMessage = sanitizeInput(message);
 
-        setUserName('');
-        setMessage('');
-        setSuccessMessage('Submitted!')
+        const formData = {
+            userName,
+            message: sanitizedMessage,
+        };
+
+        try {
+            const result = await dataPost('https://jsonplaceholder.typicode.com/posts', formData);
+
+            if (result.success) {
+                setUserName('');
+                setMessage('');
+                setSuccessMessage('Submitted!');
+                setErrorMessage('');
+            } else {
+                setErrorMessage('Error occurred, try later.');
+                setSuccessMessage('');
+            }
+        } catch (error) {
+            setErrorMessage('Error occurred, try later.');
+            setSuccessMessage('');
+        }
 
         setTimeout(() => {
             setSuccessMessage('');
+            setErrorMessage('');
         }, 7000);
 
         console.log('Sanitized Message:', sanitizedMessage);
@@ -102,6 +122,11 @@ export const Contact = () => {
                                     {successMessage && (
                                         <p className="success-message" style={{ color: 'green', marginTop: '10px' }}>
                                             {successMessage}
+                                        </p>
+                                    )}
+                                    {errorMessage && (
+                                        <p className="error-message" style={{ color: 'red', marginTop: '10px' }}>
+                                            {errorMessage}
                                         </p>
                                     )}
                                 </div>

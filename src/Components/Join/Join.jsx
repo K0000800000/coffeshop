@@ -3,9 +3,13 @@ import {
     validateEmail,
     validatePhone,
     validateFileExtension,
-} from '../utils/validUtils';
+    sanitizeInput,
+    validateName,
+    sanitizePhone,
+} from '../Functions/utils/validUtils';
 import './Join.css';
 import inside from '../../img/pg/inside.png';
+import { dataPost } from '../Functions/utils/dataPost';
 
 export const Join = () => {
     const [phone, setPhone] = useState('+');
@@ -16,35 +20,24 @@ export const Join = () => {
     const [successMessage, setSuccessMessage] = useState('');
 
     const handlePhoneChange = (e) => {
-        let value = e.target.value;
-        value = value.replace(/[^+\d]/g, '');
-        if (value[0] !== '+') {
-            value = '+' + value.replace(/\+/g, '');
-        }
-        if (value.length > 13) {
-            value = value.slice(0, 13);
-        }
+        const value = sanitizePhone(sanitizeInput(e.target.value));
         setPhone(value);
         setErrors((prev) => ({ ...prev, phone: !validatePhone(value) }));
     };
 
     const handleNameChange = (setter, field) => (e) => {
-        let value = e.target.value;
-        value = value.replace(/[^a-zA-Z]/g, '');
-        if (value.length > 32) {
-            value = value.slice(0, 32);
-        }
+        const value = sanitizeInput(e.target.value);
         setter(value);
-        setErrors((prev) => ({ ...prev, [field]: value.length < 2 }));
+        setErrors((prev) => ({ ...prev, [field]: !validateName(value) }));
     };
 
     const handleEmailChange = (e) => {
-        const value = e.target.value;
+        const value = sanitizeInput(e.target.value);
         setEmail(value);
         setErrors((prev) => ({ ...prev, email: !validateEmail(value) }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const fileInput = document.getElementById('cv');
@@ -52,8 +45,8 @@ export const Join = () => {
         const allowedExtensions = ['pdf', 'docx'];
 
         const newErrors = {
-            firstName: firstName.length < 2,
-            lastName: lastName.length < 2,
+            firstName: !validateName(firstName),
+            lastName: !validateName(lastName),
             email: !validateEmail(email),
             phone: !validatePhone(phone),
             cv: !validateFileExtension(file, allowedExtensions),
@@ -64,12 +57,26 @@ export const Join = () => {
             return;
         }
 
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setPhone('+');
-        fileInput.value = '';
-        setSuccessMessage('Submitted!');
+        const formData = {
+            firstName,
+            lastName,
+            email,
+            phone,
+            cv: file.name,
+        };
+
+        const result = await dataPost('https://jsonplaceholder.typicode.com/posts', formData);
+
+        if (result.success) {
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setPhone('+');
+            fileInput.value = '';
+            setSuccessMessage('Submitted!');
+        } else {
+            setSuccessMessage('Error occurred, try later.');
+        }
 
         setTimeout(() => {
             setSuccessMessage('');
