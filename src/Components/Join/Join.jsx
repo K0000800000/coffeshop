@@ -69,8 +69,6 @@ export const Join = () => {
         const result = await dataPost('https://jsonplaceholder.typicode.com/posts', formData);
 
         if (result.success) {
-            console.log(formData);
-
             setFirstName('');
             setLastName('');
             setEmail('');
