@@ -145,3 +145,7 @@ sup {
   display: flex;
   justify-content: center;
 }
+
+h1 {
+  word-break: auto-phrase;
+}
