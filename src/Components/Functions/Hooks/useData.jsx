@@ -13,7 +13,7 @@ export const useData = () => {
     const [photosLoading, setPhotosLoading] = useState(true); // Add loading state
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/user.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/user.json")
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -25,64 +25,64 @@ export const useData = () => {
     }, [setFeedbacks]);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setSpecialItems(data.SpecialMenu))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setCoffeeItems(data.Coffee))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setDrinksItems(data.Drinks))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setJuicesItems(data.Juices))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setTeaItems(data.Tea))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setSnacksItems(data.Snacks))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/product.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
             .then(response => response.json())
             .then(data => setOtherProductsItems(data.OtherProducts))
             .catch(error => console.error('Error fetching products:', error));
     }, []);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/massimo-admin/hg-data/main/data/gallery.json")
+        fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/gallery.json")
             .then(response => response.json())
             .then(data => {
                 setPhotos(data);
-                setPhotosLoading(false); // Set loading to false after data is fetched
+                setPhotosLoading(false);
             })
             .catch(error => {
                 console.error('Error fetching gallery data:', error);
-                setPhotosLoading(false); // Set loading to false even if there's an error
+                setPhotosLoading(false);
             });
     }, [setPhotos]);
 

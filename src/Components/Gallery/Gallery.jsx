@@ -1,7 +1,7 @@
 import './Gallery.css';
 
 const GalleryImage = ({ imageName }) => {
-    const imageUrl = `https://raw.githubusercontent.com/massimo-admin/hg-data/main/assets/img/${imageName}`;
+    const imageUrl = `https://raw.githubusercontent.com/K3247/hg-data/main/assets/img/${imageName}`;
 
     return (
         <img src={imageUrl} alt='img' onError={(e) => e.target.style.display = 'none'} />
