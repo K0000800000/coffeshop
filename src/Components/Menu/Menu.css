@@ -34,7 +34,11 @@ h1.main-heading {
     display: flex;
     align-items: stretch;
     align-content: center;
+}
+
+.rules-section {
     height: 100vh;
+
 }
 
 .cell.table_title span,
@@ -55,6 +59,10 @@ h1.main-heading {
     align-content: center;
     justify-content: space-between;
     padding: 0 20px;
+}
+
+.menu-space {
+    padding-bottom: 20px !important;
 }
 
 .tea {
@@ -193,6 +201,10 @@ section.rules-page .container {
 @media (max-width: 795px) {
     .price_table_inner {
         min-height: 120px;
+    }
+
+    .menu-heading {
+        margin-top: 0 !important;
     }
 
     .menu-left img,
