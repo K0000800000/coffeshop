@@ -40,7 +40,10 @@ export const Header = () => {
                 </div>
                 <div className='header-title-wrapper'>
                     <div className='header-title'>
-                        <div className='logo'>
+                        <div className='logo'
+                            onClick={
+                                isMobileMenuOpen ?
+                                    toggleMobileMenu : null}>
                             <NavLink to="/" className='logo-link'>
                                 <img src={img} width={67} height={67} className='logo-title' alt="title" />
                             </NavLink>
