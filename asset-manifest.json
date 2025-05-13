@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hreengouse-host/static/css/main.dfd6cead.css",
-    "main.js": "/hreengouse-host/static/js/main.49f2eef0.js",
+    "main.js": "/hreengouse-host/static/js/main.4e543fa6.js",
     "static/media/tea.png": "/hreengouse-host/static/media/tea.1dcd8c73838c37f6cbf8.png",
     "static/media/banner.png": "/hreengouse-host/static/media/banner.67375261771cd9f94c1d.png",
     "static/media/snacks.png": "/hreengouse-host/static/media/snacks.bd5bdfa88b4167ad424a.png",
@@ -21,10 +21,10 @@
     "static/media/telegram.svg": "/hreengouse-host/static/media/telegram.f7fb061b445594991c9499eb83154f1b.svg",
     "index.html": "/hreengouse-host/index.html",
     "main.dfd6cead.css.map": "/hreengouse-host/static/css/main.dfd6cead.css.map",
-    "main.49f2eef0.js.map": "/hreengouse-host/static/js/main.49f2eef0.js.map"
+    "main.4e543fa6.js.map": "/hreengouse-host/static/js/main.4e543fa6.js.map"
   },
   "entrypoints": [
     "static/css/main.dfd6cead.css",
-    "static/js/main.49f2eef0.js"
+    "static/js/main.4e543fa6.js"
   ]
 }
