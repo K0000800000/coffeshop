@@ -10,7 +10,7 @@ export const useData = () => {
     const [otherProductsItems, setOtherProductsItems] = useState([]);
     const [specialItems, setSpecialItems] = useState([]);
     const [photos, setPhotos] = useState([]);
-    const [photosLoading, setPhotosLoading] = useState(true); // Add loading state
+    const [photosLoading, setPhotosLoading] = useState(true);
 
     useEffect(() => {
         fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/user.json")
@@ -22,7 +22,7 @@ export const useData = () => {
             })
             .then(data => setFeedbacks(data))
             .catch(error => console.error('Error fetching feedbacks:', error));
-    }, [setFeedbacks]);
+    }, []);
 
     useEffect(() => {
         fetch("https://raw.githubusercontent.com/K3247/hg-data/main/data/product.json")
@@ -84,7 +84,7 @@ export const useData = () => {
                 console.error('Error fetching gallery data:', error);
                 setPhotosLoading(false);
             });
-    }, [setPhotos]);
+    }, []);
 
     return { feedbacks, specialItems, coffeeItems, drinksItems, juicesItems, teaItems, snacksItems, otherProductsItems, photos, photosLoading };
 };

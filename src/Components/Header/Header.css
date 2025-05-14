@@ -114,9 +114,12 @@
     margin-right: auto;
 }
 
+.header-inner {
+    display: flex;
+}
+
 .header-inner .toggle {
     align-items: center;
-    display: flex;
     overflow: visible;
     padding: 0 2rem;
 }
@@ -134,6 +137,7 @@ button.toggle {
 }
 
 .toggle {
+    display: none;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -188,6 +192,9 @@ button.toggle {
 }
 
 @media (max-width: 796px) {
+    .toggle {
+        display: flex;
+    }
 
     .mobile-menu {
         position: fixed;
