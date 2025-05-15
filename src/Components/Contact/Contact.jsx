@@ -105,7 +105,7 @@ export const Contact = () => {
                                     required
                                 ></textarea>
                                 <div className='submit-group'>
-                                    <button type="submit">Submit</button>
+                                    <button type="submit" className="submit-button">Submit</button>
                                     {successMessage && (
                                         <p className="success-message" style={{ color: 'green', marginTop: '10px' }}>
                                             {successMessage}

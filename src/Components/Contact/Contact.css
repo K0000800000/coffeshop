@@ -1,5 +1,4 @@
 .contact-page {
-    margin-top: 85px;
     padding: 0;
 }
 
@@ -22,6 +21,7 @@
 }
 
 .contact-left {
+    margin-top: 50px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,10 @@ section.join-page .container {
     margin-left: 0;
 }
 
+.contactus-left a {
+    font-size: 13px;
+}
+
 .contact-left.contactus-left ul {
     margin: 0;
     display: flex;
@@ -64,15 +68,12 @@ section.join-page .container {
 }
 
 .contact-left.contactus-left ul li {
+    height: 100%;
     display: block;
     list-style: none;
     text-align: center;
     color: #222;
     width: 33%;
-}
-
-.contactus-left {
-    justify-content: space-around !important;
 }
 
 .align-img {
@@ -87,6 +88,7 @@ section.menu-page,
 
 .contact-left.contactus-left {
     padding: 20px;
+    justify-content: space-evenly;
 }
 
 .feedback {
@@ -116,15 +118,6 @@ section.menu-page,
     overflow-y: auto;
 }
 
-.feedback-form button {
-    padding: 10px;
-    font-size: inherit;
-    background-color: #414b3a;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
 .feedback-form button:hover {
     background-color: #333;
@@ -133,6 +126,14 @@ section.menu-page,
 @media (max-width: 768px) {
     iframe {
         min-height: 300px;
+    }
+
+    .contact-left {
+        margin-top: 30px;
+    }
+
+    .contact-left.contactus-left {
+        padding: 0;
     }
 
     .contact-left.contactus-left ul {

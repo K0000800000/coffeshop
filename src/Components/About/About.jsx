@@ -21,7 +21,7 @@ export const About = () => {
                             <p>Situated in a vibrant location, this coffee shop provides the perfect setting to enjoy your time to the fullest while soaking in the charm of the surroundings. With a wide array of offerings, it creates a memorable experience for visitors seeking a cozy and welcoming spot. If you’re searching for the best local coffee shops nearby, this is the place to discover a lot more than you could imagine!</p>
                         </div>
                         <div className="info-left">
-                            <img src={line} alt='line' />
+                            <img src={line} alt='info' />
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ export const About = () => {
                 <div className="container">
                     <div className="info-section is2">
                         <div className="info-right story-row-right">
-                            <img src={line2} alt='img' />
+                            <img src={line2} alt='info' />
                         </div>
                         <div className="info-left story-row-left">
                             <div className="story-container">
