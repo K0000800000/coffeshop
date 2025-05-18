@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 h2.contact-heading {
@@ -83,12 +83,6 @@ section.join-page .container {
 section.menu-page,
 .rules-page {
     padding: 0;
-}
-
-
-.contact-left.contactus-left {
-    padding: 20px;
-    justify-content: space-evenly;
 }
 
 .feedback {
