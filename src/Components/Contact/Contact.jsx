@@ -49,7 +49,7 @@ export const Contact = () => {
 
     return (
         <section className="join-page contact-page">
-            <div className="container">
+            <div className="container container-plus">
                 <div className="join-section">
                     <div className="contact-right">
                         <iframe

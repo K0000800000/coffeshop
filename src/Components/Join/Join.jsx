@@ -92,7 +92,7 @@ export const Join = () => {
 
     return (
         <section className="join-page">
-            <div className="container">
+            <div className="container container-plus">
                 <div className="join-section">
                     <div className="contact-right">
                         <img src={inside} alt="inside" className="img" />

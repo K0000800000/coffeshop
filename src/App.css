@@ -121,6 +121,10 @@ sup {
   width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 15px;
+  height: 100%;
+}
+
+.container-plus {
   height: 100vh;
 }
 
