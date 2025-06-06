@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import img from '../../img/pg/hreengouse.png';
+import img from '../../img/pg/coffeshop.png';
 import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
