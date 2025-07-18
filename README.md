@@ -1,0 +1,1 @@
+coffeshop client-side sample
